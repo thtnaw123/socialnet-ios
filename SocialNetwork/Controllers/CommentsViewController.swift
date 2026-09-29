@@ -22,10 +22,11 @@ class CommentsViewController: UIViewController {
         super.viewDidLoad()
         setUpTableView()
         setUpLoader()
-        fetchComments(postId:targetPostId)
+        bindViewModel()
+        commentsViewModel.fetchComments(postId: targetPostId)
     }
     
-    func fetchComments(postId:Int){
+    func bindViewModel(){
         commentsViewModel.$isLoading
             .receive(on: DispatchQueue.main)
             .sink{ [weak self] value in

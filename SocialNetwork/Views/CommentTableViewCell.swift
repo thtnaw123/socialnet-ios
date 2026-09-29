@@ -30,7 +30,7 @@ class CommentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func hydrateComments(){
+    func hydrateComments() {
         userNameLabel.text = targetComments?.name
         commentBodyLabel.text = targetComments?.body
     }

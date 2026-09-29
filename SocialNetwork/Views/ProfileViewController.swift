@@ -86,8 +86,5 @@ class ProfileViewController: UIViewController {
     func stopLoading() {
         spinner.stopAnimating()
     }
-    
-
-
 
 }

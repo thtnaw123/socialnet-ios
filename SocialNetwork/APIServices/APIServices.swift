@@ -93,7 +93,7 @@ class APIServices{
                 .sink(receiveCompletion: { completion in
                     switch completion {
                         case .finished:
-                            PrintDebug.printDebug("posts received")
+                            debugPrint("posts received")
                         case .failure(let error):
                             promise(.failure(error))
                     }
